@@ -1,0 +1,362 @@
+*,
+*::after,
+*::before {
+       box-sizing: border-box;
+       margin: 0px;
+       padding: 0px;
+       border: 0px;
+}
+
+
+/* || body/ */
+
+.body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #191C1D;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+    "nv nv nv nv"
+    "hd hd hd hd"
+    "ft ft ft ft";
+    background-color: #FBFCFE;
+    column-gap: 16px;
+}
+
+/* || link/ */
+.link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+}
+
+/* || nav/ */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: nv;
+    height: 80px;
+    padding: 12px 16px;
+}
+
+/* || logo/ */
+.logo {
+    width: 160px;
+}
+
+/* || header/ */
+
+.header {
+    grid-area: hd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    padding: 12px 16px;
+    background-image: url('../images/emeskay-website-image.jpg');
+    background-size: cover;
+    background-color: #00677F;
+}
+
+/* __heading */
+
+.header__heading {
+    margin: 0px 0px 8px 0px;
+}
+
+/* __subheading */
+
+.header__subheading {
+    margin: 0px 0px 16px 0px;
+}
+
+/* __button */
+
+.header__button {
+    box-shadow: 0px 1px 3px 1px #808080;
+}
+
+.header__button:hover {
+    background-color: #E3E8F1;
+    box-shadow: 0px 2px 6px 2px #808080;
+    cursor: pointer;
+}
+
+.header__button:focus {
+    background-color: #DEE1EE;
+    box-shadow: 0px 1px 3px 1px #808080;
+
+}
+
+.header__button:disabled {
+    background-color: #DFE0E3;
+    box-shadow: none;
+    color: #191C1D;
+    cursor: not-allowed;
+}
+
+/* || heading/ */
+
+.heading {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 400;
+    font-family: 'Barlow', sans-serif;
+    color: #ffffff;
+}
+
+.heading--footer {
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #191C1D;
+}
+
+/* || subheading/ */
+
+.subheading {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+}
+
+/* || button/ */
+
+.button {
+    width: 99px;
+    height: 40px;
+    font-size: 14px;
+    background-color: #EEF5F8;
+    color: #00677F;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    transition-duration: 0.4s;
+}
+
+/* || footer/ */
+
+.footer {
+    grid-area: ft;
+    padding: 12px 16px;
+}
+
+/* __heading */
+
+.footer__heading {
+    margin: 0px 0px 8px 0px;
+}
+
+/* __body */
+
+.footer__body {
+    margin: 0px 0px 8px 0px;
+}
+
+/* --last-element */
+
+.footer__body--last-element {
+    margin: 0px;
+}
+
+/* __link */
+
+.footer__link {
+    margin: 0px 0px 8px 0px;
+}
+
+.footer__link:link {
+    color: #00677F;
+    text-decoration: none;
+    
+}
+
+.footer__link:visited {
+    color: #954A00;
+    text-decoration: none;
+}
+
+.footer__link:hover {
+    color: #005FB0;
+    text-decoration: underline;
+}
+
+.footer__link:active {
+    color: #954A00;
+    text-decoration: underline;
+}
+
+/* --display-block */
+
+.footer__link--display-block {
+    display: block;
+}
+
+/* || Medium Window */
+
+@media only screen and (min-width: 600px) {
+    /* || body/ */
+
+    .body--medium {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    /* || button/ */
+    .button--medium {
+        width: 132px;
+        height: 60px;
+        font-size: 19px;
+    }
+
+    /* || link/ */
+    .link--medium {
+        font-size: 14px;
+        line-height: 20px
+    }
+
+    /* || footer/ */
+
+    .footer--medium {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+        "fh fh fh fh fh fh fh fh"
+        "c1 c1 c1 c1 c2 c2 c2 c2";
+        column-gap: 24px;
+        padding: 20px 24px;
+    }
+
+    .footer__col-1 {
+        grid-area: c1;
+    }
+
+    .footer__col-2 {
+        grid-area: c2;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .footer__body--medium {
+        margin-bottom: 8px;
+    }
+
+    .footer__heading--medium {
+        grid-area: fh;
+        margin-bottom: 16px;
+    }
+
+    .footer__link--medium {
+        margin-bottom: 8px;
+    }
+    
+    /* || header/ */
+    
+    .header__heading--medium {
+        margin-bottom: 16px;
+    }
+
+    .header__subheading--medium {
+        margin-bottom: 20px;
+    }
+
+    .header--medium {
+        padding: 20px 24px;
+    }
+
+    /* || heading/ */
+
+    .heading--medium {
+        font-size: 45px;
+        line-height: 52px;
+    }
+
+    .heading--footer-medium {
+        font-size: 16px;
+    }
+
+    /* nav/ */
+
+    .nav--medium {
+        padding: 20px 24px;
+    }
+
+    /* page/ */
+
+    .page--medium {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas:
+        "nv nv nv nv nv nv nv nv"
+        "hd hd hd hd hd hd hd hd"
+        "ft ft ft ft ft ft ft ft";
+        column-gap: 24px;
+    }
+
+    .subheading--medium {
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+
+@media only screen and (min-width: 840px) {
+    
+    .button--expanded {
+        grid-area: btn;
+        width: 198px;
+        height: 80px;
+        font-size: 28px;
+    }
+    
+    .header--expanded {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: fit-content(100%) fit-content(100%) fit-content(100%);
+        grid-template-areas:
+        ". h"
+        ". sh"
+        ". btn";
+        column-gap: 24px;
+        align-items: start;
+        align-content: center;
+    }
+
+    .heading--expanded {
+        grid-area: h;
+        font-size: 57px;
+        line-height: 64px;
+    }
+
+    .nav--expanded {
+        justify-content: start;
+    }
+    
+    .page--expanded {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas:
+        "nv nv nv nv nv nv nv nv nv nv nv nv"
+        "hd hd hd hd hd hd hd hd hd hd hd hd"
+        "ft ft ft ft ft ft ft ft ft ft ft ft";
+    }
+
+    .subheading--expanded {
+        grid-area: sh;
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
